@@ -25,3 +25,27 @@ https://darvishdarab.github.io/cs421_f20/docs/readings/restful/api/
   - 처리된 데이터 결과가 클라이언트로 전송
   - 서버에서 실행되는 소프트웨어
     - apache, IIS
+
+
+## Github
+
+Git / Github  명령(기능)
+
+- 버전관리
+- 협업
+
+- 저장소
+repository : local repository, remote repository
+
+- 버전관리
+commit : 작업 완료된 상태 표시
+push : 소스코드 파일 업로드/서버 업데이트
+pull : 소스코드 파일 로컬 업데이트
+
+- 협업
+branch : 각각 독립되어 작업할 수 있도록 가지를 분리하는 것
+merge : 따로 작업된 소스를 병합하는 것
+pull request : 여러 작업자가 작업을 한 이후에 업데이트/병합을 관리자에게 요청
+
+
+https://github.com/edu-ministori/gitac01
