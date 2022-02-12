@@ -251,6 +251,7 @@ root 상대방식 : /images/photo.jpg
 ```
 
 - 클래스
+
   - 하나의 웹문서내에서 동일한 이름을 사용할 수 있음
   - 하나의 요소에 여러 개의 이름을 사용할 수 있음
 
@@ -333,3 +334,194 @@ id 선택자
   - id : 100
   - class : 10
   - tag : 1
+
+## CSS Property
+
+- Contents styling
+
+  - Text Contents
+  - Multimedia Contents
+
+- Structure Styling => layout
+
+## Text Contents Styling
+
+### Text Color : 텍스트 색
+
+- color
+- red, #1A3DFF, rgb(255,0,100)
+
+### Text Align : 텍스트 정렬
+
+- text-align
+- left, right, center, justify
+
+### Text Decoration : 텍스트 라인
+
+- text-decoration
+- overline, line-through, underline, none
+
+### Text Indent : 텍스트 들여쓰기
+
+- text-indent
+- px 값으로 지정
+
+### Letter Spacing : 자간
+
+- letter-spacing
+- px 값으로 지정
+  - 양수, 음수값 모두 사용 가능
+
+### Line Height : 줄 높이
+
+- line-height
+- px값 지정, 배수값 표현
+
+### White Space : 줄바꿈 지정
+
+- white-space
+- wrap(기본), nowrap
+
+### Font Family : 글꼴 종류
+
+- font-family
+- 고딕체(sans-serif), 명조체(serif)
+- 고딕체 : 본고딕(Noto sans), 나눔바른고딕
+- 웹폰트
+  - 로컬 : woff 폰트 형식 사용
+  - CDN 서비스 : 구글 폰트
+
+### Font Style : 기울임꼴
+
+- font-style
+- italic
+
+### Font Weight : 글꼴 굵기
+
+- font-weight
+- normal, bold
+- 100,200,300,400,500,600,700,800,900
+
+### Font Size : 글꼴 크기
+
+- font-size
+- px 단위 지정
+- 브라우저의 기본크기 : 16px
+
+### List Style
+
+- list-style-type : 목록 기호 스타일 지정
+- none : 목록 기호 삭제
+
+### Table Style
+
+- border-collapse : 테이블 테두리 틈 상태 지정
+- collapse : 틈 합친 상태
+
+### Link Style
+
+- 4가지 상태 구분
+  - a:link : 기본 상태
+  - a:visited : 방문한 상태
+  - a:hover : 마우스 갖다댄 상태
+  - a:active : 마우스 버튼 누른 상태
+
+## Layout
+
+### Box Model
+
+- content => width/height : 너비/높이
+- padding : 안쪽여백
+- border : 테두리
+- margin : 바깥여백
+- content, padding, border : 박스 영역에 포함
+
+#### content(width/height)
+
+- 박스 기본성질(block/inline)
+
+- block 요소 width/height
+  - 크기 지정 안했을 때
+    - 너비 : 부모요소 영역 너비만큼 채워짐
+    - 높이 : 자식요소 영역 높이만큼 지정됨
+  - px 지정
+    - 기본 성질에 상관없이 고정 크기
+  - % 지정
+    - 너비 : 부모요소 영역 기준으로 일정 비율만큼 지정
+           =>부모요소 너비가 변경되면 실시간으로 같이 변함
+    - 높이 : 기본 성질로 적용 => % 단위 적용되지 않음
+
+#### padding
+
+- 4방향 각각 독립적으로 적용(4개중 일부만 사용)
+  - padding-top
+  - padding-right
+  - padding-bottom
+  - padding-left
+
+- 축약 표현(4방향 동시적용 값을 따로 적용)
+  - 값 4개 : 각 방향 각각 적용
+  - 값 3개 : 위-아래 각각 적용, 왼쪽-오른쪽 공통적용
+  - 값 2개 : 위-아래, 왼쪽-오른쪽 각각 공통적용
+  - 값 1개 : 4방향 모두 공통 적용
+
+#### margin
+
+- padding과 사용방법이 같음
+
+- margin collapse
+  - 위-아래 세로 방향으로 인접해 있을 때 사이 여백이 상쇄되는 현상
+  - 위-아래 여백이 모두 적용되어 있을 때 둘 중 큰 쪽만 적용됨
+  - 위 또는 아래 박스 한쪽에만 margin 적용
+
+#### border
+
+- border:1px(굵기) solid(종류) red(색);
+
+- border-top
+- border-right
+- border-bottom
+- border-left
+
+#### box 크기 계산
+
+- content(width/height) + padding + border [+ margin]
+
+```
+Ex)
+width:300px, padding:20px(4방향), border:1px(4방향);
+=> 전체크기 : 300 + 40 + 2 = 342
+
+전체크기 : 400px, padding:20px(4), border:1px(4), width:?
+=> 400 - 40 - 2 = 358
+```
+
+- box-sizing
+  - content-box : content 기준(기본)
+  - border-box : box 기준
+
+```
+Ex)
+width:300px, padding:20px(4), border:1px(4)
+box-sizing:border-box;
+=> 전체크기 : 300px
+```
+
+#### inline 요소에 box model 적용
+
+- content(width/height) : 적용 안됨
+- padding : 적용됨
+- border : 적용됨
+- margin : 일부 적용(좌우적용)
+
+=> inline 요소는 레이아웃 구성에 사용할 수 없음
+
+#### display 속성
+
+- 박스의 화면 표시 속성을 변경
+- display
+  - block
+  - inline
+  - inline-block : 박스모델 적용, 한 줄에 나란히 표시
+  - none
+
