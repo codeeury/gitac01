@@ -558,6 +558,7 @@ box-sizing:border-box;
 * 16진수 : 0 ~ 9, A(10) ~ F(15) (16개의 숫자)
 
 |color|Red|Green|Blue|
+|---|---|---|---|
 |byte |1 byte|1 byte|1 byte|
 |개수|256|256|256|
 |10진수|0~255|0~255|0~255|
