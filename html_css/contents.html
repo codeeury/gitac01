@@ -19,7 +19,16 @@
         font-weight: 100;
       }
       a {
+        /* text-decoration: none; */
+      }
+      a.border {
         text-decoration: none;
+        display:inline-block;
+        padding-bottom:20px;
+      }
+      a.border:hover{
+        padding-bottom:19px;
+        border-bottom:1px solid red;
       }
       p {
         text-indent: 16px;
@@ -32,6 +41,28 @@
       ol {
         list-style-type: none;
       }
+
+      h2{
+        width:80%;
+        height:60px;
+        padding:20px;
+        border-bottom:5px solid red;
+        margin-bottom:30px;
+      }
+      table{
+        width:100%;
+        border-collapse:collapse;
+      }
+      th,
+      td{
+        border:1px solid black;
+      }
+      th{
+        background:#aaaaaa;
+      }
+      td{
+        text-align:center;
+      }
     </style>
   </head>
   <body>
@@ -42,11 +73,7 @@
         <p>위키백과, 우리 모두의 백과사전.</p>
         <p>
           HTML5는
-          <a href="https://ko.wikipedia.org/wiki/HTML" target="_blank">HTML</a
-          >의 완전한 5번째 버전으로 월드 와이드 웹 (World Wide Web)의 핵심
-          마크업 언어이다. 2004년 7월 Web Hypertext Application Technology
-          Working Group(WHATWG)에서 웹 애플리케이션 1.0이라는 이름으로 세부 명세
-          작업을 시작하였다.
+          <a href="https://ko.wikipedia.org/wiki/HTML" target="_blank">HTMLg</a>의 완전한 5번째 버전으로 월드 와이드 웹 (World Wide Web)의 핵심마크업 언어이다. 2004년 7월 Web Hypertext Application TechnologyWorking Group(WHATWG)에서 웹 애플리케이션 1.0이라는 이름으로 세부 명세작업을 시작하였다.
         </p>
         <p>
           HTML5는 HTML 4.01, XHTML 1.0, DOM 레벨 2 HTML에 대한 차기 표준
@@ -54,7 +81,7 @@
           액티브X 없이 브라우저에서 쉽게 볼 수 있게 하는 것을 목적으로 한다.
         </p>
         <p>
-          <a href="https://ko.wikipedia.org/wiki/W3C" target="_blank">W3C</a>는
+          <a href="https://ko.wikipedia.org/wiki/W3C" target="_blank" class="border">W3Cg</a>는
           2014년 10월 28일 HTML5 표준안을 확정했다고 발표했다.
         </p>
         <p>
