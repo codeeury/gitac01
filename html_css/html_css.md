@@ -325,6 +325,14 @@ id 선택자
 }
 ```
 
+- combinator selector (복합/조합 셀렉터)
+  - 부모, 조상요소로 부터 찾아가는 방식
+  - 선택자의 적용 대상 범위를 좁힐 수 있음
+  - 공백 : 자손요소 선택
+  - > : 자식요소 선택
+
+
+
 ## Cascading(캐스캐이딩) 규칙
 
 - 동일한 대상에 동일한 CSS property가 여러번 적용될 때 앞에서 적용된
@@ -608,3 +616,73 @@ div{
   background-color:rgba(200,156,50,0.6);
 }
 ```
+
+### Box 배치
+
+#### flex
+
+- display:flex;
+  - 가로배치
+  - 배치와 관련된 여러가지 제어를 쉽게 할 수 있음
+  - 부모요소에 적용
+
+- 부모요소에 적용하는 flex 관련 Style
+  - flex-direction
+    - 배치 방향
+    - column, column-reverse, row(default), row-reverse
+  - flex-wrap
+    - 배치 줄바꿈
+    - wrap, nowrap(default)
+  - justify-content
+    - 가로 정렬(맞춤) : flex-start, center, flex-end
+    - 간격 : space-around, space-between
+  - align-items
+    - 세로 정렬 : flex-start, center, flex-end
+    - stretch(default) : 세로 길이가 부모요소에 맞춰서 채워짐
+      (* flex 적용된 박스의 가로길이는 자식요소에 맞춰짐)
+
+## 상속(inherit)
+
+- 부모 요소에 적용된 CSS Style이 자식요소에도 적용되는 현상
+
+## 반응형 웹
+
+- 반응형 웹
+  - OSMU(One Source Multi Use)
+    - HTML이 OSMU 형태로 사용됨(Contents가 OSMU 형태로 사용됨)
+  - 여러가지 모바일 디바이스에 대응할 수 있는 디자인이 적용된 웹
+- 적응형 웹
+  - OSMU 형태로 사용되지 않음
+  - pc 사이트와 mobile 사이트가 분리되어 있고 디바이스 종류에 따라서 해당 사이트로 리다이렉트됨
+
+- 뷰포트
+  - pc 해상도를 기준으로 모바일 해상도를 PC해상도에 맞춰줌
+  - 픽셀 밀도를 같도록 맞춰줌
+ 
+- 픽셀 밀도
+  - 모바일 디바이스의 화면 크기가 작아서 픽셀의 크기를 작게해서 더 많은 수의
+    픽셀이 표현될 수 있도록 밀도를 높인 것
+- 구현
+  - 이미지, 동영상 : 모바일 디바이스 화면 해상도를 기준
+  - CSS 구현 : 텍스트 크기, 박스모델 크기값 등 PC 해상도를 기준
+
+- Break Point(변경점)
+  - 특정 디바이스의 스타일로 변경되는 해상도 지점
+  - 가로방향 해상도
+  - 일반 기준 해상도(세로모드 기준)
+    - 스마트 폰 : 320px ~ 360px
+    - 태블릿 : 768px ~ 900px
+    - PC : 1024px ~ 1920px ~
+  - 변경점 사이 범위를 지정
+    - s.p : <640
+    - t.b : <960(1024)
+    - p.c : open 범위
+  - 모바일 디바이스의 경우 실제 해상도가 아닌 CSS 해상도가 기준(https://www.mydevice.io/)
+
+  - 반응형 웹 구형
+    - 뷰포트 설정
+    - 변경점 범위 설정
+      - 미디어 쿼리 : @media
+
+
+
