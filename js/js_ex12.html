@@ -79,6 +79,18 @@
     .form-section{
       margin:10px 0;
     }
+
+    .car-item{
+      display:flex;
+    }
+
+    .car-number,
+    .car-name{
+      border:1px solid pink;
+      display:inline-block;
+      padding:10px;
+      margin-right:10px;
+    }
   </style>
 </head>
 <body>
@@ -101,21 +113,111 @@
 
   <div class="form-area">
     <div class="form-section">
-      <input type="text" class="input-text">
+      <input type="text" class="input-text-create">
       <input type="button" class="btn btn-create" value="추가">
     </div>
     <div class="form-section">
-      <input type="text" class="input-text">
+      <input type="text" class="input-text-read-number">
+      <input type="text" class="input-text-read">
       <button type="button" class="btn btn-read">표시</button>
     </div>
     <div class="form-section">
-      <input type="text" class="input-text">
+      <input type="text" class="input-text-update-number">
+      <input type="text" class="input-text-update">
       <button type="button" class="btn btn-update">수정</button>
     </div>
     <div class="form-section">
-      <input type="text" class="input-text">
+      <input type="text" class="input-text-delete">
       <button type="button" class="btn btn-delete">삭제</button>
     </div>
   </div>
+
+  <script>
+    // Create - Add
+    const buttonCreate = document.querySelector('.btn-create');
+
+    buttonCreate.addEventListener('click', function(){
+
+      // li 생성
+      let listItem = document.createElement('li');
+
+      // span 생성
+      let listItemNumber = document.createElement('span');
+      // 인덱스 번호 생성
+      let newIndexNumber = document.querySelectorAll('.car-item').length + 1;
+      // 인덱스 번호 가공
+      let number = document.createTextNode(newIndexNumber);
+      // span 태그에 숫자값을 자식요소로 추가
+      listItemNumber.appendChild(number);
+      // span 태그에 class 추가
+      listItemNumber.classList.add('car-number');
+
+      // span 생성
+      let listItemName = document.createElement('span');
+      // 목록 내용 가져오기
+      const inputCreate = document.querySelector('.input-text-create').value;
+      // 목록 내용 가공
+      let text = document.createTextNode(inputCreate);
+      // span 태그에 목록 내용을 자식요소로 추가
+      listItemName.appendChild(text);
+      // span 태그에 class 이름 추가
+      listItemName.classList.add('car-name');
+
+      // li 태그에 span 태그 2세트를 자식요소로 추가
+      listItem.appendChild(listItemNumber);
+      listItem.appendChild(listItemName);
+      // li 태그에 class 추가
+      listItem.classList.add('car-item');
+
+      // ul 태그에 li태그를 자식요소로 추가
+      let list = document.querySelector('.car-list');
+      list.appendChild(listItem);
+    });
+  
+    // Read
+    const buttonRead = document.querySelector('.btn-read');
+
+    buttonRead.addEventListener('click', function(){
+      // 입력된 찾는 번호 가져오기
+      let indexNumber = document.querySelector('.input-text-read-number').value;
+      // 목록 전체 가져오기
+      let listItem = document.querySelectorAll('.car-item');
+      // 목록에서 찾는 번호값과 같은 아이템 가져오기
+      let findTextParent = document.querySelectorAll('.car-item')[indexNumber-1];
+      // 아이템속에 있는 텍스트 값만 가져오기
+      let findText = findTextParent.querySelector('.car-name').innerHTML;
+      // 텍스트 값을 웹페이지에 있는 인풋 요소에 표시하기
+      document.querySelector('.input-text-read').value = findText;
+    });
+
+    // Update
+    const buttonUpdate = document.querySelector('.btn-update');
+
+    buttonUpdate.addEventListener('click', function(){
+      // 입력된 찾는 번호 가져오기
+      let indexNumber = document.querySelector('.input-text-update-number').value;
+      // 수정할 텍스트 가져오기
+      let textUpdate = document.querySelector('.input-text-update').value;
+      // 목록에서 찾는 번호값과 같은 아이템 가져오기
+      let findTextParent = document.querySelectorAll('.car-item')[indexNumber-1];
+      // 아이템속에 있는 텍스트 값만 가져오기
+      findTextParent.querySelector('.car-name').innerHTML = textUpdate;
+    });
+
+    // Delete
+    const buttonDelete = document.querySelector('.btn-delete');
+
+    buttonDelete.addEventListener('click', function(){
+      // 입력된 찾는 번호 가져오기
+      let indexNumber = document.querySelector('.input-text-delete').value-1;
+
+      // 목록 가져오기
+      let list = document.querySelector('.car-list');
+      let listItem = document.querySelectorAll('.car-item');
+      // 부모요소를 기준으로 자식요소 삭제
+      list.removeChild(listItem[indexNumber]);
+
+    });
+  </script>
 </body>
 </html>
