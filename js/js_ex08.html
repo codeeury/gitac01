@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script>
+    class Car{
+      constructor(){
+        this.name = 'Kia';
+        this.model = 'EV6';
+      }
+    }
+
+    let car1 = new Car();
+    console.log(car1);
+
+    let car2 = {
+      name : 'Hyundai',
+      model : 'GV80'
+    }
+    console.log(car2);
+
+    class Person{
+      constructor(name, major){
+        this.name = name;
+        this.major = major;
+      }
+      print(){
+        console.log(this.name + ' : ' + this.major);
+      }
+    }
+
+    let person1 = new Person('Tom', 'Computer');
+    console.log(person1);
+    person1.print();
+
+    let car3 = new Car();
+    console.log(car3);
+
+    let person2 = new Person('Mary', 'Art');
+    console.log(person2);
+  </script>
+</head>
+<body>
+  <h1>클래스</h1>
+</body>
+</html>

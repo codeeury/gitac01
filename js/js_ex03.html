@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script>
+      let a = 0;
+      if (a >= 0) {
+        console.log("true");
+      }
+      a = -1;
+      if (a >= 0) {
+        console.log("true");
+      }
+      a = 0;
+      if (a > 0) {
+        console.log("양수");
+      } else if (a < 0) {
+        console.log("음수");
+      } else {
+        console.log("0");
+      }
+
+      console.log(new Date().getDay());
+      switch (new Date().getDay()) {
+        case 0:
+          console.log("일요일");
+          break;
+        case 1:
+          console.log("월요일");
+          break;
+        case 2:
+          console.log("화요일");
+          break;
+        case 3:
+          console.log("수요일");
+          break;
+        case 4:
+          console.log("목요일");
+          break;
+        case 5:
+          console.log("금요일");
+          break;
+        case 6:
+          console.log("토요일");
+          break;
+      }
+
+      if (new Date().getDay() === 0) {
+        console.log("일요일");
+      } else if (new Date().getDay() === 1) {
+        console.log("월요일");
+      } else if (new Date().getDay() === 2) {
+        console.log("화요일");
+      } else if (new Date().getDay() === 3) {
+        console.log("수요일");
+      } else if (new Date().getDay() === 4) {
+        console.log("목요일");
+      } else if (new Date().getDay() === 5) {
+        console.log("금요일");
+      } else if (new Date().getDay() === 6) {
+        console.log("토요일");
+      }
+    </script>
+  </head>
+  <body>
+    <h1>명령문 - 조건문/분기문</h1>
+  </body>
+</html>

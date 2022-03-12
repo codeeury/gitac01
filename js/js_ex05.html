@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <script>
+    function sum() {
+      let sum2 = 0;
+      for (let i = 0; i < 5; i++) {
+        sum2 += 500;
+        console.log("반복구문(For 블럭)" + sum2);
+      }
+      console.log("반복구문(For 블럭 밖)" + sum2);
+    }
+
+    sum();
+
+    function arith(number1, number2) {
+      console.log("------------------");
+      console.log(number1 + number2);
+      console.log(number1 - number2);
+      console.log(number1 * number2);
+      console.log(number1 / number2);
+    }
+
+    arith(30, 20);
+    arith(10, 5);
+
+    function average(kor, eng, math) {
+      let avg = (kor + eng + math) / 3;
+
+      return avg;
+    }
+
+    if (average(30, 90, 47) >= 60) {
+      console.log("합격");
+    } else {
+      console.log("불합격");
+    }
+
+    function print1() {
+      console.log("Hello World");
+    }
+
+    const print2 = function () {
+      console.log("Hello World");
+    };
+  </script>
+  <body>
+    <h1>함수</h1>
+  </body>
+</html>

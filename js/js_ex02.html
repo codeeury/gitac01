@@ -1,43 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-  <script>
-    // 산술연산
-    var a = 1; // ES5
-    let b = 2; // ES6
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script>
+      var value1 = 10;
+      let value2 = 5;
+      const value3 = 50;
 
-    console.log(a+b);
-    console.log(a-b);
-    console.log(a*b);
-    console.log(a/b);
-    console.log(a%b);
+      value1 = 1;
+      value2 = 2;
+      // value3 = 3;
 
-    a = a + 5;
-    console.log(a);
-    a += 5;
-    console.log(a);
-    a++; // a += 1
-    console.log(a);
+      console.log(value1);
+      console.log(value2);
+      console.log(value3);
 
-    // 문자열 연산
-    console.log(10 + 16);
-    console.log("10" + "16");
-    console.log("10" + 16);
+      // 산술연산
+      var a = 1; // ES5
+      let b = 2; // ES6
 
-    // 비교 연산
-    console.log(1 == 1);
-    console.log(1 != 1);
-    console.log("1" == 1);
-    console.log("1" === 1);
-    console.log("1" != 1);
-    console.log("1" !== 1);
-  </script>
-</head>
-<body>
-  <h1>데이터, 변수, 연산</h1>
-</body>
+      console.log(a + b);
+      console.log(a - b);
+      console.log(a * b);
+      console.log(a / b);
+      console.log(a % b);
+
+      a = a + 5;
+      console.log(a);
+      a += 5;
+      console.log(a);
+      a++; // a += 1
+      console.log(a);
+
+      // 문자열 연산
+      console.log(10 + 16);
+      console.log("10" + "16");
+      console.log("10" + 16);
+
+      // 비교 연산
+      console.log(1 == 1);
+      console.log(1 != 1);
+      console.log("1" == 1);
+      console.log("1" === 1);
+      console.log("1" != 1);
+      console.log("1" !== 1);
+    </script>
+  </head>
+  <body>
+    <h1>데이터, 변수, 연산</h1>
+  </body>
 </html>

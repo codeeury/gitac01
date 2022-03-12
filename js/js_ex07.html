@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script>
+    const person = {
+      firstName : 'Tom',
+      lastName : 'John',
+      grade : 3,
+      major : 'computer',
+      fullName : function(){
+        console.log(person.firstName + person.lastName);
+        console.log(this.firstName + this.lastName);
+      }
+    }
+
+    // 추가
+    person.age = 22;
+    // 출력
+    console.log(person.firstName);
+    console.log(person['grade']);
+    // 수정
+    person.grade = 2;
+    console.log(person);
+    // 삭제
+    delete person.major;
+    console.log(person);
+
+    // 메소드 사용
+    person.fullName();
+
+    const array = [1,2,3];
+    console.log(array);
+
+    console.log(window);
+  </script>
+</head>
+<body>
+  <h1>객체</h1>
+</body>
+</html>

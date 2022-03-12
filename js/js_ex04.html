@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script>
+      let sum = 0;
+
+      sum = sum + 500;
+      sum = sum + 500;
+      sum = sum + 500;
+      sum = sum + 500;
+      sum = sum + 500;
+
+      console.log("일반구문 : " + sum);
+
+      let sum2 = 0;
+      for (let i = 0; i < 5; i++) {
+        sum2 += 500;
+        console.log("반복구문(For 블럭)" + sum2);
+      }
+      console.log("반복구문(For 블럭 밖)" + sum2);
+
+      for (let i = 2; i <= 10; i += 2) {
+        console.log("Hello World..!" + i);
+      }
+
+      let id = "front";
+
+      while (true) {
+        if (id === "front") {
+          break;
+        }
+      }
+
+      console.log("out");
+    </script>
+  </head>
+  <body>
+    <h1>명령문 - 반복문</h1>
+  </body>
+</html>
