@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <h1>DOM 접근 메소드</h1>
+
+  <p>Paragraph 1</p>
+  <p id="para">Paragraph 2</p>
+  <p class="text">Paragraph 3</p>
+
+  <script>
+    // HTML4
+    let dom1 = document.getElementsByTagName('p');
+    let dom2 = document.getElementById('para');
+    let dom3 = document.getElementsByClassName('text');
+
+    console.log(dom1);
+    console.log(dom2);
+    console.log(dom3);
+
+    // jQuery DOM
+    // $('p'), $('#para'), $('.text')
+
+    // HTML5
+    let dom4 = document.querySelector('p');
+    let dom5 = document.querySelector('#para');
+    let dom6 = document.querySelector('.text');
+
+    console.log(dom4);
+    console.log(dom5);
+    console.log(dom6);
+
+    let dom7 = document.querySelectorAll('p');
+
+    console.log(dom7);
+
+  </script>
+</body>
+</html>
