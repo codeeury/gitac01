@@ -7,11 +7,9 @@
     <title>Project - Home</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Nunito+Sans:wght@200;300;400;600;700;800;900&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Nunito+Sans:wght@200;300;400;600;700;800;900&display=swap" rel="stylesheet" >
     <link rel="stylesheet" href="/project/css/style.css" />
+    <script src="/project/js/function.js" defer></script>
   </head>
   <body>
     <header class="header">
@@ -43,7 +41,18 @@
       </p>
     </section>
     <section class="section2">
-      <article class="group">
+      <ul class="tab-menu">
+        <li class="tab-menu-item active">
+          <button type="button" class="tab-button">Group 1</button>
+        </li>
+        <li class="tab-menu-item">
+          <button type="button" class="tab-button">Group 2</button>
+        </li>
+        <li class="tab-menu-item">
+          <button type="button" class="tab-button">Group 3</button>
+        </li>
+      </ul>
+      <article class="group active">
         <figure class="visual-wrap">
           <img src="/project/resource/image_01.jpg" alt="" class="visual" />
         </figure>
