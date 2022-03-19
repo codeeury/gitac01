@@ -31,3 +31,31 @@ for(let i=0;i<tabMenu.length;i++){
   });
 }
 
+// carousel
+const play = document.querySelector('.play');
+const slide = document.querySelectorAll('.slide');
+
+let current = 0;
+let next = 1;
+let prev = 2;
+
+play.addEventListener('click', function(){
+
+  if(next >= slide.length){
+    next = 0;
+  }
+
+  slide[current].classList.remove('current', 'next');
+  slide[current].classList.add('prev');
+
+  slide[next].classList.remove('prev', 'next');
+  slide[next].classList.add('current');
+  
+  slide[prev].classList.remove('current', 'prev');
+  slide[prev].classList.add('next');
+
+  prev = current;
+  current = next;
+  next++;
+
+});
