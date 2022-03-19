@@ -199,6 +199,10 @@ font-family: 'Nunito Sans', sans-serif; */
   margin: 0 auto; /* right,left margin - auto */
 }
 
+.tab-menu{
+  display:none;
+}
+
 .section2 > .group {
   display: flex;
 }
