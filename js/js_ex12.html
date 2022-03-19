@@ -1,223 +1,315 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-  <style>
-    /* http://meyerweb.com/eric/tools/css/reset/ 
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      /* http://meyerweb.com/eric/tools/css/reset/ 
       v2.0 | 20110126
       License: none (public domain)
     */
 
-    html, body, div, span, applet, object, iframe,
-    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-    a, abbr, acronym, address, big, cite, code,
-    del, dfn, em, img, ins, kbd, q, s, samp,
-    small, strike, strong, sub, sup, tt, var,
-    b, u, i, center,
-    dl, dt, dd, ol, ul, li,
-    fieldset, form, label, legend,
-    table, caption, tbody, tfoot, thead, tr, th, td,
-    article, aside, canvas, details, embed, 
-    figure, figcaption, footer, header, hgroup, 
-    menu, nav, output, ruby, section, summary,
-    time, mark, audio, video {
-      margin: 0;
-      padding: 0;
-      border: 0;
-      font-size: 100%;
-      font: inherit;
-      vertical-align: baseline;
-      box-sizing:border-box;
-    }
-    /* HTML5 display-role reset for older browsers */
-    article, aside, details, figcaption, figure, 
-    footer, header, hgroup, menu, nav, section {
-      display: block;
-    }
-    body {
-      line-height: 1;
-    }
-    ol, ul {
-      list-style: none;
-    }
-    blockquote, q {
-      quotes: none;
-    }
-    blockquote:before, blockquote:after,
-    q:before, q:after {
-      content: '';
-      content: none;
-    }
-    table {
-      border-collapse: collapse;
-      border-spacing: 0;
-    }
+      html,
+      body,
+      div,
+      span,
+      applet,
+      object,
+      iframe,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      p,
+      blockquote,
+      pre,
+      a,
+      abbr,
+      acronym,
+      address,
+      big,
+      cite,
+      code,
+      del,
+      dfn,
+      em,
+      img,
+      ins,
+      kbd,
+      q,
+      s,
+      samp,
+      small,
+      strike,
+      strong,
+      sub,
+      sup,
+      tt,
+      var,
+      b,
+      u,
+      i,
+      center,
+      dl,
+      dt,
+      dd,
+      ol,
+      ul,
+      li,
+      fieldset,
+      form,
+      label,
+      legend,
+      table,
+      caption,
+      tbody,
+      tfoot,
+      thead,
+      tr,
+      th,
+      td,
+      article,
+      aside,
+      canvas,
+      details,
+      embed,
+      figure,
+      figcaption,
+      footer,
+      header,
+      hgroup,
+      menu,
+      nav,
+      output,
+      ruby,
+      section,
+      summary,
+      time,
+      mark,
+      audio,
+      video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+        box-sizing: border-box;
+      }
+      /* HTML5 display-role reset for older browsers */
+      article,
+      aside,
+      details,
+      figcaption,
+      figure,
+      footer,
+      header,
+      hgroup,
+      menu,
+      nav,
+      section {
+        display: block;
+      }
+      body {
+        line-height: 1;
+      }
+      ol,
+      ul {
+        list-style: none;
+      }
+      blockquote,
+      q {
+        quotes: none;
+      }
+      blockquote:before,
+      blockquote:after,
+      q:before,
+      q:after {
+        content: "";
+        content: none;
+      }
+      table {
+        border-collapse: collapse;
+        border-spacing: 0;
+      }
 
-    h1{
-      font-size:30px;
-      font-weight:bold;
-      margin-bottom:50px;
-    }
+      h1 {
+        font-size: 30px;
+        font-weight: bold;
+        margin-bottom: 50px;
+      }
 
-    .car-list{
-      border:1px solid #555;
-      width:300px;
-      padding:20px;
-    }
-    .car-item{
-      margin:10px 0;
-    }
+      .car-list {
+        border: 1px solid #555;
+        width: 300px;
+        padding: 20px;
+      }
+      .car-item {
+        margin: 10px 0;
+      }
 
-    .form-area{
-      border:1px solid #555;
-      width:300px;
-      padding:20px;
-    }
-    .form-section{
-      margin:10px 0;
-    }
+      .form-area {
+        border: 1px solid #555;
+        width: 300px;
+        padding: 20px;
+      }
+      .form-section {
+        margin: 10px 0;
+      }
 
-    .car-item{
-      display:flex;
-    }
+      .car-item {
+        display: flex;
+      }
 
-    .car-number,
-    .car-name{
-      border:1px solid pink;
-      display:inline-block;
-      padding:10px;
-      margin-right:10px;
-    }
-  </style>
-</head>
-<body>
-  <h1>DOM CRUD</h1>
+      .car-number,
+      .car-name {
+        border: 1px solid pink;
+        display: inline-block;
+        padding: 10px;
+        margin-right: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>DOM CRUD</h1>
 
-  <ul class="car-list">
-    <li class="car-item">
-      <span class="car-number">1</span>
-      <span class="car-name">Volvo</span>
-    </li>
-    <li class="car-item">
-      <span class="car-number">2</span>
-      <span class="car-name">Saab</span>
-    </li>
-    <li class="car-item">
-      <span class="car-number">3</span>
-      <span class="car-name">BMW</span>
-    </li>
-  </ul>
+    <ul class="car-list">
+      <li class="car-item">
+        <span class="car-number">1</span>
+        <span class="car-name">Volvo</span>
+      </li>
+      <li class="car-item">
+        <span class="car-number">2</span>
+        <span class="car-name">Saab</span>
+      </li>
+      <li class="car-item">
+        <span class="car-number">3</span>
+        <span class="car-name">BMW</span>
+      </li>
+    </ul>
 
-  <div class="form-area">
-    <div class="form-section">
-      <input type="text" class="input-text-create">
-      <input type="button" class="btn btn-create" value="추가">
+    <div class="form-area">
+      <div class="form-section">
+        <input type="text" class="input-text-create" />
+        <input type="button" class="btn btn-create" value="추가" />
+      </div>
+      <div class="form-section">
+        <input type="text" class="input-text-read-number" />
+        <input type="text" class="input-text-read" />
+        <button type="button" class="btn btn-read">표시</button>
+      </div>
+      <div class="form-section">
+        <input type="text" class="input-text-update-number" />
+        <input type="text" class="input-text-update" />
+        <button type="button" class="btn btn-update">수정</button>
+      </div>
+      <div class="form-section">
+        <input type="text" class="input-text-delete" />
+        <button type="button" class="btn btn-delete">삭제</button>
+      </div>
     </div>
-    <div class="form-section">
-      <input type="text" class="input-text-read-number">
-      <input type="text" class="input-text-read">
-      <button type="button" class="btn btn-read">표시</button>
-    </div>
-    <div class="form-section">
-      <input type="text" class="input-text-update-number">
-      <input type="text" class="input-text-update">
-      <button type="button" class="btn btn-update">수정</button>
-    </div>
-    <div class="form-section">
-      <input type="text" class="input-text-delete">
-      <button type="button" class="btn btn-delete">삭제</button>
-    </div>
-  </div>
 
-  <script>
-    // Create - Add
-    const buttonCreate = document.querySelector('.btn-create');
+    <script>
+      // Create - Add
+      const buttonCreate = document.querySelector(".btn-create");
 
-    buttonCreate.addEventListener('click', function(){
+      buttonCreate.addEventListener("click", function () {
+        // li 생성
+        let listItem = document.createElement("li");
 
-      // li 생성
-      let listItem = document.createElement('li');
+        // span 생성
+        let listItemNumber = document.createElement("span");
+        // 인덱스 번호 생성
+        let newIndexNumber = document.querySelectorAll(".car-item").length + 1;
+        // 인덱스 번호 가공
+        let number = document.createTextNode(newIndexNumber);
+        // span 태그에 숫자값을 자식요소로 추가
+        listItemNumber.appendChild(number);
+        // span 태그에 class 추가
+        listItemNumber.classList.add("car-number");
 
-      // span 생성
-      let listItemNumber = document.createElement('span');
-      // 인덱스 번호 생성
-      let newIndexNumber = document.querySelectorAll('.car-item').length + 1;
-      // 인덱스 번호 가공
-      let number = document.createTextNode(newIndexNumber);
-      // span 태그에 숫자값을 자식요소로 추가
-      listItemNumber.appendChild(number);
-      // span 태그에 class 추가
-      listItemNumber.classList.add('car-number');
+        // span 생성
+        let listItemName = document.createElement("span");
+        // 목록 내용 가져오기
+        const inputCreate = document.querySelector(".input-text-create").value;
+        // 목록 내용 가공
+        let text = document.createTextNode(inputCreate);
+        // span 태그에 목록 내용을 자식요소로 추가
+        listItemName.appendChild(text);
+        // span 태그에 class 이름 추가
+        listItemName.classList.add("car-name");
 
-      // span 생성
-      let listItemName = document.createElement('span');
-      // 목록 내용 가져오기
-      const inputCreate = document.querySelector('.input-text-create').value;
-      // 목록 내용 가공
-      let text = document.createTextNode(inputCreate);
-      // span 태그에 목록 내용을 자식요소로 추가
-      listItemName.appendChild(text);
-      // span 태그에 class 이름 추가
-      listItemName.classList.add('car-name');
+        // li 태그에 span 태그 2세트를 자식요소로 추가
+        listItem.appendChild(listItemNumber);
+        listItem.appendChild(listItemName);
+        // li 태그에 class 추가
+        listItem.classList.add("car-item");
 
-      // li 태그에 span 태그 2세트를 자식요소로 추가
-      listItem.appendChild(listItemNumber);
-      listItem.appendChild(listItemName);
-      // li 태그에 class 추가
-      listItem.classList.add('car-item');
+        // ul 태그에 li태그를 자식요소로 추가
+        let list = document.querySelector(".car-list");
+        list.appendChild(listItem);
+      });
 
-      // ul 태그에 li태그를 자식요소로 추가
-      let list = document.querySelector('.car-list');
-      list.appendChild(listItem);
-    });
-  
-    // Read
-    const buttonRead = document.querySelector('.btn-read');
+      // Read
+      const buttonRead = document.querySelector(".btn-read");
 
-    buttonRead.addEventListener('click', function(){
-      // 입력된 찾는 번호 가져오기
-      let indexNumber = document.querySelector('.input-text-read-number').value;
-      // 목록 전체 가져오기
-      let listItem = document.querySelectorAll('.car-item');
-      // 목록에서 찾는 번호값과 같은 아이템 가져오기
-      let findTextParent = document.querySelectorAll('.car-item')[indexNumber-1];
-      // 아이템속에 있는 텍스트 값만 가져오기
-      let findText = findTextParent.querySelector('.car-name').innerHTML;
-      // 텍스트 값을 웹페이지에 있는 인풋 요소에 표시하기
-      document.querySelector('.input-text-read').value = findText;
-    });
+      buttonRead.addEventListener("click", function () {
+        // 입력된 찾는 번호 가져오기
+        let indexNumber = document.querySelector(".input-text-read-number")
+          .value;
+        // 목록 전체 가져오기
+        let listItem = document.querySelectorAll(".car-item");
+        // 목록에서 찾는 번호값과 같은 아이템 가져오기
+        let findTextParent = document.querySelectorAll(".car-item")[
+          indexNumber - 1
+        ];
+        // 아이템속에 있는 텍스트 값만 가져오기
+        let findText = findTextParent.querySelector(".car-name").innerHTML;
+        // 텍스트 값을 웹페이지에 있는 인풋 요소에 표시하기
+        document.querySelector(".input-text-read").value = findText;
+      });
 
-    // Update
-    const buttonUpdate = document.querySelector('.btn-update');
+      // Update
+      const buttonUpdate = document.querySelector(".btn-update");
 
-    buttonUpdate.addEventListener('click', function(){
-      // 입력된 찾는 번호 가져오기
-      let indexNumber = document.querySelector('.input-text-update-number').value;
-      // 수정할 텍스트 가져오기
-      let textUpdate = document.querySelector('.input-text-update').value;
-      // 목록에서 찾는 번호값과 같은 아이템 가져오기
-      let findTextParent = document.querySelectorAll('.car-item')[indexNumber-1];
-      // 아이템속에 있는 텍스트 값만 가져오기
-      findTextParent.querySelector('.car-name').innerHTML = textUpdate;
-    });
+      buttonUpdate.addEventListener("click", function () {
+        // 입력된 찾는 번호 가져오기
+        let indexNumber = document.querySelector(".input-text-update-number")
+          .value;
+        // 수정할 텍스트 가져오기
+        let textUpdate = document.querySelector(".input-text-update").value;
+        // 목록에서 찾는 번호값과 같은 아이템 가져오기
+        let findTextParent = document.querySelectorAll(".car-item")[
+          indexNumber - 1
+        ];
+        // 아이템속에 있는 텍스트 값만 가져오기
+        findTextParent.querySelector(".car-name").innerHTML = textUpdate;
+      });
 
-    // Delete
-    const buttonDelete = document.querySelector('.btn-delete');
+      // Delete
+      const buttonDelete = document.querySelector(".btn-delete");
 
-    buttonDelete.addEventListener('click', function(){
-      // 입력된 찾는 번호 가져오기
-      let indexNumber = document.querySelector('.input-text-delete').value-1;
+      buttonDelete.addEventListener("click", function () {
+        // 입력된 찾는 번호 가져오기
+        let indexNumber =
+          document.querySelector(".input-text-delete").value - 1;
 
-      // 목록 가져오기
-      let list = document.querySelector('.car-list');
-      let listItem = document.querySelectorAll('.car-item');
-      // 부모요소를 기준으로 자식요소 삭제
-      list.removeChild(listItem[indexNumber]);
+        // 목록 가져오기
+        let list = document.querySelector(".car-list");
+        let listItem = document.querySelectorAll(".car-item");
+        // 부모요소를 기준으로 자식요소 삭제
+        list.removeChild(listItem[indexNumber]);
 
-    });
-  </script>
-</body>
+        // 번호 재배열
+        let listItem2 = document.querySelectorAll(".car-item");
+        for (let i = 0; i < listItem2.length; i++) {
+          listItem2[i].querySelector(".car-number").innerHTML = i + 1;
+        }
+      });
+    </script>
+  </body>
 </html>
