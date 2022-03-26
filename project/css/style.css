@@ -266,6 +266,42 @@ font-family: 'Nunito Sans', sans-serif; */
   color: #bcbcbc;
 }
 
+/* about page */
+
+.about-section1{
+  background:url(/project/resource/bg_about.jpg) no-repeat 0 0;
+  height:320px;
+  padding-top:105px;
+  color:#fff;
+}
+
+.about-section1 .section-paragraph{
+  color:#fff;
+}
+
+.about-section2{
+  height:280px;
+  background:#10c9c3;
+  color:#fff;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-section2 .icon-wrap{
+  width:80%;
+  display:flex;
+  justify-content: space-between;
+}
+
+.about-section2 .icon-item{
+  padding-left:50px;
+}
+
+.about-section2 .icon-number{
+  margin-bottom:10px;
+}
+
 /* tablet */
 @media screen and (max-width: 1360px) {
   .section2 {
