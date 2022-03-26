@@ -269,10 +269,11 @@ font-family: 'Nunito Sans', sans-serif; */
 /* about page */
 
 .about-section1{
-  background:url(/project/resource/bg_about.jpg) no-repeat 0 0;
+  background:url(/project/resource/bg_about.jpg) no-repeat center;
   height:320px;
   padding-top:105px;
   color:#fff;
+  background-size:cover;
 }
 
 .about-section1 .section-paragraph{
@@ -295,11 +296,72 @@ font-family: 'Nunito Sans', sans-serif; */
 }
 
 .about-section2 .icon-item{
-  padding-left:50px;
+  padding-left:60px;
+}
+
+/* 가상클래스 - Pseudo class */
+/* 상태, 순서로 선택 */
+/*
+  :link, :hover, :visited, :active - 상태표현
+  :first-child, :last-child, :nth-child - 순서표현
+*/
+.about-section2 .icon-item:nth-child(1){
+  background:url(/project/resource/icon_01.png) no-repeat 0 center;
+}
+
+.about-section2 .icon-item:nth-child(2){
+  background:url(/project/resource/icon_02.png) no-repeat 0 center;
+}
+
+.about-section2 .icon-item:nth-child(3){
+  background:url(/project/resource/icon_03.png) no-repeat 0 center;
+}
+
+.about-section2 .icon-item:nth-child(4){
+  background:url(/project/resource/icon_04.png) no-repeat 0 center;
 }
 
 .about-section2 .icon-number{
-  margin-bottom:10px;
+  margin-bottom:5px;
+}
+
+.about-section3{
+  height:596px;
+  background:#f5f5f5 url(/project/resource/bg_frame.jpg) no-repeat 0 0;
+  position:relative;
+}
+
+.about-section3 .text-wrap{
+  width:500px;
+  position:absolute;
+  top:105px;
+  right:100px;
+}
+
+.about-section3 .section-heading,
+.about-section3 .section-paragraph{
+  text-align:left;
+  margin-bottom:30px;
+}
+
+.about-section4{
+  padding-top:105px;
+  padding-bottom:105px;
+}
+
+.about-section4 .section-heading,
+.about-section4 .section-paragraph{
+  margin-bottom:30px;
+}
+
+.section-button{
+  width:100px;
+  height:50px;
+  background:#10c9c3;
+  color:#fff;
+  border:0; /* none */
+  display:block;
+  margin:0 auto;
 }
 
 /* tablet */
@@ -394,6 +456,17 @@ font-family: 'Nunito Sans', sans-serif; */
   .footer {
     display: block;
     padding: 20px;
+  }
+
+  /* about page */
+  .about-section2 .icon-wrap{
+    display:block;
+  }
+
+  .about-section3 .text-wrap{
+    width:auto;
+    position:static;
+    padding:100px 30px 0;
   }
 }
 

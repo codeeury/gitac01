@@ -49,3 +49,13 @@ pull request : 여러 작업자가 작업을 한 이후에 업데이트/병합�
 
 
 https://github.com/edu-ministori/gitac01
+
+## AJAX & SPA
+
+- AJAX(Asynchronous JavaScript And XML)
+- SPA(Single Page Application)
+
+- 물리적으로 페이지를 구분하지 않고 하나의 페이지에 데이터를 추가/교환하는 방식으로
+  페이지의 콘텐츠를 표기하는 방식
+
+
